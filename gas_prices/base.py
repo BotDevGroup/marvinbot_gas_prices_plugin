@@ -69,7 +69,7 @@ class GasPrices(Plugin):
         responses.append("⛽ <b>{}</b>\n".format(title))
         last_update = item.get('pubDate','').strip()
 
-        description = item.get('description', '')
+        description = item.get('description', '').encode('iso-8859-1').decode('utf8')
 
         soup = BeautifulSoup(description, 'html.parser')
 
