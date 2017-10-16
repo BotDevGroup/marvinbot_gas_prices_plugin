@@ -9,7 +9,7 @@ with open('README.rst') as readme_file:
 requirements = [
     'marvinbot',
     'requests',
-    # TODO: put package requirements here
+    'xmltodict'
 ]
 
 test_requirements = [
