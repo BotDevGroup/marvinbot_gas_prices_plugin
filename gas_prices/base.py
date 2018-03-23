@@ -19,7 +19,7 @@ class GasPrices(Plugin):
         return {
             'short_name': self.name,
             'enabled': True,
-            'base_url': 'https://mic.gob.do/combustibleRSS.xml'
+            'base_url': 'https://micm.gob.do/combustibleRSS.xml'
         }
 
     def configure(self, config):
@@ -27,7 +27,7 @@ class GasPrices(Plugin):
         pass
 
     def setup_handlers(self, adapter):
-        self.add_handler(CommandHandler('gas', self.on_gas, command_description='Fetch gas prices from mic.gob.do'))
+        self.add_handler(CommandHandler('gas', self.on_gas, command_description='Fetch gas prices from micm.gob.do'))
 
     def setup_schedules(self, adapter):
         pass
